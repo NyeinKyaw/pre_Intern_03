@@ -11,23 +11,26 @@
             }
             document.addEventListener('DOMContentLoaded', function(){
                 document.querySelector('form').onsubmit = function(){
-                    const name = document.querySelector('.name').value;
+                    var name = document.querySelector('.name').value;
                     alert('Welcome, ' + name);
                 };
 
                 document.querySelector('#red').onclick = function(){
-                    document.querySelector('#red').style.background = 'red';
-                    document.querySelector('h2').style.color = 'red';
+                    const colorr = 'red';
+                    document.querySelector('#red').style.background = colorr;
+                    document.querySelector('h2').style.color = colorr;
                     document.querySelector('h2').style.marginLeft = '200px';
                 };
                 document.querySelector('#green').onclick = function(){
-                    document.querySelector('#green').style.background = 'green';
-                    document.querySelector('h2').style.color = 'green';
+                    const colorr = 'green';
+                    document.querySelector('#green').style.background = colorr;
+                    document.querySelector('h2').style.color = colorr;
                     document.querySelector('h2').style.marginTop = '50px';
                 };
                 document.querySelector('#blue').onclick = function(){
-                    document.querySelector('#blue').style.background = 'blue';
-                    document.querySelector('h2').style.color = 'blue';
+                    const colorr = 'blue';
+                    document.querySelector('#blue').style.background = colorr;
+                    document.querySelector('h2').style.color = colorr;
                     document.querySelector('h2').style.marginBottom = '100px';
                 };
             });
