@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Testing Dataset object
+        </title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                document.querySelectorAll('.colorChange').forEach(function(button){
+                    button.onclick = function(){
+                        document.querySelector('h2').style.color = button.dataset.color;
+                    };
+                });
+
+
+                document.querySelectorAll('.colorChange1').forEach(button => {
+                    button.onclick = () => {
+                        document.querySelector('.colorChange2').style.background = button.dataset.color;
+                        document.querySelector('.toChange').style.color = button.dataset.color;
+                    };
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h2>Testing Variable</h2>
+        <button class="colorChange" data-color="red">Red</button>
+        <button class="colorChange" data-color="green">Green</button>
+        <button class="colorChange" data-color="blue">Blue</button>
+        <button class="colorChange" data-color="orange">Orange</button><br><hr>
+
+        <h2 class="toChange">Using with Arrow function</h2>
+        <button class="colorChange1" data-color="red">Red</button>
+        <button class="colorChange1" data-color="green">Green</button>
+        <button class="colorChange1" data-color="blue">Blue</button>
+        <button class="colorChange1" data-color="orange">Orange</button>
+        <button class="colorChange2">Color</button>
+    </body>
+</html>
