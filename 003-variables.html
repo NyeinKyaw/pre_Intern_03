@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Testing Variables
+        </title>
+        <script>
+            let num = 1;
+            if(num==true){
+                alert('Hello! Welcome to my testing world.');
+            }
+            document.addEventListener('DOMContentLoaded', function(){
+                document.querySelector('form').onsubmit = function(){
+                    const name = document.querySelector('.name').value;
+                    alert('Welcome, ' + name);
+                };
+
+                document.querySelector('#red').onclick = function(){
+                    document.querySelector('#red').style.background = 'red';
+                    document.querySelector('h2').style.color = 'red';
+                    document.querySelector('h2').style.marginLeft = '200px';
+                };
+                document.querySelector('#green').onclick = function(){
+                    document.querySelector('#green').style.background = 'green';
+                    document.querySelector('h2').style.color = 'green';
+                    document.querySelector('h2').style.marginTop = '50px';
+                };
+                document.querySelector('#blue').onclick = function(){
+                    document.querySelector('#blue').style.background = 'blue';
+                    document.querySelector('h2').style.color = 'blue';
+                    document.querySelector('h2').style.marginBottom = '100px';
+                };
+            });
+        </script>
+    </head>
+    <body>
+        <h2>Testing Variable</h2>
+        <form>
+            <input type="text" placeholder="Enter your name here" class="name">
+            <input type="submit">
+        </form><br><br>
+        <button id="red">Red</button>
+        <button id="green">Green</button>
+        <button id="blue">Blue</button>
+    </body>
+</html>
