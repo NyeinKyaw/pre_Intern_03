@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DropDown Assignment</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector('#colorChange').onchange = () => {
+                    var sel = colorChange.options[colorChange.selectedIndex].value;
+                    document.querySelector('h2').style.color = sel;
+                };
+            });
+        </script>
+    </head>
+    <body>
+        
+        <h2>Hello! Welcome to our PreIntern Group</h2>
+        <select class="mdb-select md-form" id="colorChange" name="selection">
+            <option value="black" enabled selected>Black</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+    
+    </body>
+</html>
